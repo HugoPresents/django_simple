@@ -1,0 +1,4 @@
+django-simple
+=============
+
+Learning django
