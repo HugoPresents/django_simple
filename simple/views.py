@@ -22,5 +22,7 @@ def now_plus(request, offset):
 def index(request):
     now = datetime.datetime.now()
     t = get_template('index.html')
-    html = t.render(Context('now':str(now)))
+    #t.render(Context({'current_date': now}))
+    html = t.render(Context({'now':now}))
+    #html = "<html><body>It is now %s.</body></html>" % now
     return HttpResponse(html)
