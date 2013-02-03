@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-from simple.views import *
+from django_simple.views import *
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
