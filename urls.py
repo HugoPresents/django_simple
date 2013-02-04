@@ -1,9 +1,10 @@
 from django.conf.urls import patterns, include, url
 
-from django_simple.views import *
+from views import *
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+# this line for auto discover exists user and group and user, why no istalled app~?
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
@@ -14,7 +15,7 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
     (r'^hello/$', hello),
     (r'^now/$', now),
     (r'^now/plus/(\d)/$', now_plus),
