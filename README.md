@@ -1,4 +1,4 @@
 django-simple
 =============
 
-Learning django
+Learning django with The Django Book
