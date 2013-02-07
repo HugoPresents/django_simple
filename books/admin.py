@@ -4,6 +4,7 @@ from books.models import Publisher, Author, Book
 # define customize list style
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name', 'email')
+    ordering = ('id',)
 
 class BookAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'publication_date', 'publisher')
@@ -12,6 +13,8 @@ class BookAdmin(admin.ModelAdmin):
     list_filter = ('publication_date',)
     # I'm not fully understand here~
     date_hierarchy = 'publication_date'
+    # What a terrible function
+    filter_horizontal = ('authors',)
 admin.site.register(Publisher)
 # register customize class
 admin.site.register(Author, AuthorAdmin)
